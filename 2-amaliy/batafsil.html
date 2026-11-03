@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitoblar Katalogi va Jadvali</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Kutubxona ARM</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Bosh sahifa</a></li>
+                <li><a href="batafsil.html">Katalog va Jadval</a></li>
+                <li><a href="aloqa.html">Kitob band qilish</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        
+        <!-- JADVAL BO'LIMI -->
+        <section id="table-section">
+            <h2>Kitoblar ro'yxati va narxlari jadvali</h2>
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <caption>Kutubxona fondidagi asosiy adabiyotlar statistikasi</caption>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Kitob nomi</th>
+                            <th>Muallif</th>
+                            <th colspan="2">Tafsilotlar (Janr va Narxi)</th>
+                            <th>Holati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>O'tkan kunlar</td>
+                            <td>Abdulla Qodiriy</td>
+                            <td>Roman</td>
+                            <td>15 000 so'm</td>
+                            <td><span class="status-available">Mavjud</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Dunyoning ishlari</td>
+                            <td>O'tkir Hoshimov</td>
+                            <td>Qissa</td>
+                            <td>12 000 so'm</td>
+                            <td><span class="status-available">Mavjud</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Yulduzli tunlar</td>
+                            <td>Pirimqul Qodirov</td>
+                            <td rowspan="2">Tarixiy romanlar</td>
+                            <td>20 000 so'm</td>
+                            <td><span class="status-reserved">Band qilingan</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Boburnoma</td>
+                            <td>Zahiriddin Muhammad Bobur</td>
+                            <td>25 000 so'm</td>
+                            <td><span class="status-available">Mavjud</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Sariq devni minib</td>
+                            <td>Xudoyberdi To'xtaboyev</td>
+                            <td>Sarguzasht</td>
+                            <td>14 000 so'm</td>
+                            <td><span class="status-available">Mavjud</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- MEDIA VA KARTALAR BO'LIMI -->
+        <section id="catalog-section">
+            <span class="badge-absolute">-20% chegirma</span>
+            <h2>Ommabop Kitoblar Katalogi</h2>
+            
+            <div class="cards-flex">
+                <article class="book-card">
+                    <div>
+                        <div class="book-img-placeholder">Muqova</div>
+                        <h3 class="book-card-title">O'tkan kunlar</h3>
+                        <p class="book-card-author">Abdulla Qodiriy</p>
+                    </div>
+                    <a href="aloqa.html" class="btn-card" style="text-align:center; text-decoration:none; display:block;">Band qilish</a>
+                </article>
+
+                <article class="book-card">
+                    <div>
+                        <div class="book-img-placeholder">Muqova</div>
+                        <h3 class="book-card-title">Dunyoning ishlari</h3>
+                        <p class="book-card-author">O'tkir Hoshimov</p>
+                    </div>
+                    <a href="aloqa.html" class="btn-card" style="text-align:center; text-decoration:none; display:block;">Band qilish</a>
+                </article>
+
+                <article class="book-card">
+                    <div>
+                        <div class="book-img-placeholder">Muqova</div>
+                        <h3 class="book-card-title">Sariq devni minib</h3>
+                        <p class="book-card-author">Xudoyberdi To'xtaboyev</p>
+                    </div>
+                    <a href="aloqa.html" class="btn-card" style="text-align:center; text-decoration:none; display:block;">Band qilish</a>
+                </article>
+
+                <article class="book-card">
+                    <div>
+                        <div class="book-img-placeholder">Muqova</div>
+                        <h3 class="book-card-title">Yulduzli tunlar</h3>
+                        <p class="book-card-author">Pirimqul Qodirov</p>
+                    </div>
+                    <a href="aloqa.html" class="btn-card" style="text-align:center; text-decoration:none; display:block;">Band qilish</a>
+                </article>
+            </div>
+
+            <!-- Video yoki Iframe media -->
+            <div style="margin-top: 30px;">
+                <h3 style="margin-bottom: 15px;">Kutubxona bo'ylab virtual ekskursiya</h3>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Kutubxona video taqdimoti" style="border:0; border-radius: 8px;" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-col">
+            <p>&copy; 2026 Kutubxona axborot tizimi.</p>
+        </div>
+        <div class="footer-col" style="text-align: right;">
+            <p>Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="top-btn">&#8675; Yuqoriga</a>
+
+</body>
+</html>

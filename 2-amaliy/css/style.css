@@ -1,0 +1,290 @@
+/* --- BQ 1: Blok modeli va o'lchamlar --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* --- BQ 2: Konteyner --- */
+.main-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section, .sidebar-section {
+    background: #ffffff;
+    padding: 25px; /* BQ 4: Qisqa yozuv 2 yoki 4 qiymat bilan */
+    border: 1px solid #e2e8f0; /* BQ 3: Kartalar uchun border */
+    border-radius: 12px; /* BQ 3: border-radius */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative; /* BQ 6 uchun ota element */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #1e293b;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 8px;
+    font-size: 22px;
+}
+
+/* --- BQ 5: Pozitsiyalash - Sticky Header --- */
+header {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex; /* BQ 8 */
+    justify-content: space-between; /* BQ 8 */
+    align-items: center; /* BQ 8 */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex; /* BQ 8 */
+    list-style: none;
+    gap: 20px; /* BQ 8 */
+}
+
+nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* --- BQ 6: Absolute Pozitsiyalash (Belgi / Badge) --- */
+.badge-absolute {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background-color: #22c55e;
+    color: white;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* --- BQ 7: Fixed Pozitsiyalash ("Yuqoriga" tugmasi) --- */
+.top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0ea5e9;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+.top-btn:hover {
+    background-color: #0284c7;
+}
+
+/* --- JADVAL USLUBLARI --- */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.styled-table caption {
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #64748b;
+}
+
+.styled-table th, 
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.styled-table th {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-weight: 600;
+}
+
+.styled-table tr:hover {
+    background-color: #f8fafc;
+}
+
+.status-available {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.status-reserved {
+    color: #ea580c;
+    font-weight: 600;
+}
+
+/* --- BQ 9: Flexbox Kartalar Qatori --- */
+.cards-flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ekran torayganda keyingi qatorga tushishi */
+}
+
+.book-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px; /* BQ 3 */
+    flex: 1 1 240px; /* BQ 9 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.book-img-placeholder {
+    background: #e2e8f0;
+    height: 140px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center; /* BQ 11: Markazlashtirish */
+    justify-content: center; /* BQ 11: Markazlashtirish */
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.book-card-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.book-card-author {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.btn-card {
+    margin-top: 15px;
+    padding: 8px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #1e293b;
+}
+
+.btn-card:hover {
+    background: #e2e8f0;
+}
+
+/* --- BQ 12: Forma uslublari (Flex-direction column va gap) --- */
+.form-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column; /* BQ 12 */
+    gap: 6px; /* BQ 12 */
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #475569;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.btn-submit {
+    margin-top: 20px;
+    background-color: #0ea5e9;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0284c7;
+}
+
+/* --- BQ 10: Footer ikki ustunli Flexbox bilan --- */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    padding: 20px 40px;
+    margin-top: 40px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* --- MEDIA SO'ROVLAR (Responsive) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul {
+        gap: 10px;
+    }
+}

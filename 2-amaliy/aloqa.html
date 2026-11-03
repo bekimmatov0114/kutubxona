@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitob band qilish - Forma</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Kutubxona ARM</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Bosh sahifa</a></li>
+                <li><a href="batafsil.html">Katalog va Jadval</a></li>
+                <li><a href="aloqa.html">Kitob band qilish</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section id="form-section">
+            <h2>Kitob band qilish formasi</h2>
+            <form action="#" method="POST">
+                <div class="form-grid">
+                    
+                    <!-- 1. F.I.SH -->
+                    <div class="form-group">
+                        <label for="fullname">F.I.SH:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="To'liq ismingizni kiriting" required>
+                    </div>
+
+                    <!-- 2. Email -->
+                    <div class="form-group">
+                        <label for="email">Elektron pochta:</label>
+                        <input type="email5" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+
+                    <!-- 3. Telefon (Pattern talabi bilan) -->
+                    <div class="form-group">
+                        <label for="phone">Telefon raqam:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+998901234567" pattern="\+998[0-9]{9}" required title="+998 bilan boshlanuvchi 9 ta raqam kiriting">
+                    </div>
+
+                    <!-- 4. Kitob soni -->
+                    <div class="form-group">
+                        <label for="count">Kitob nusxasi soni:</label>
+                        <input type="number" id="count" name="count" min="1" max="5" value="1">
+                    </div>
+
+                    <!-- 5. Olish sanasi -->
+                    <div class="form-group">
+                        <label for="date">Olish sanasi:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <!-- 6. Kitobni tanlash (Select) -->
+                    <div class="form-group">
+                        <label for="book-select">Kitobni tanlang:</label>
+                        <select id="book-select" name="book_select" required>
+                            <option value="">-- Tanlang --</option>
+                            <option value="otkan-kunlar">O'tkan kunlar</option>
+                            <option value="dunyoning-ishlari">Dunyoning ishlari</option>
+                            <option value="yulduzli-tunlar">Yulduzli tunlar</option>
+                            <option value="sariq-dev">Sariq devni minib</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- 7. Radio guruh (Fieldset + Legend) -->
+                <fieldset style="border: 1px solid #cbd5e1; border-radius: 6px; padding: 15px; margin-top: 20px;">
+                    <legend style="font-weight: 600; padding: 0 5px;">Kitobni olish usuli:</legend>
+                    <div style="display: flex; gap: 20px; margin-top: 10px;">
+                        <label><input type="radio" name="delivery_type" value="library" checked> Kutubxona o'quv zalidan</label>
+                        <label><input type="radio" name="delivery_type" value="home"> Uyga olib ketish</label>
+                    </div>
+                </fieldset>
+
+                <!-- 8. Checkbox va Textarea -->
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="comments">Qo'shimcha izoh yoki istaklar:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Fikrlaringiz..." style="padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; outline: none;"></textarea>
+                </div>
+
+                <div style="margin-top: 15px;">
+                    <label><input type="checkbox" name="terms" required> Qoidalar bilan tanishdim va roziman</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Band qilishni tasdiqlash</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-col">
+            <p>&copy; 2026 Kutubxona axborot tizimi.</p>
+        </div>
+        <div class="footer-col" style="text-align: right;">
+            <p>Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="top-btn">&#8675; Yuqoriga</a>
+
+</body>
+</html>
