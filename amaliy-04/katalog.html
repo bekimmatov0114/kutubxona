@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitoblar Katalogi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Kutubxona ARM</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Bosh sahifa</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="aloqa.html">Kitob band qilish</a></li>
+                <li><span class="band-belgi">Bandlar: <span id="band-soni">0</span></span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+
+        <!-- STATISTIKA (reduce / find / filter bilan hisoblanadi) -->
+        <section id="stat-section">
+            <h2>Fond statistikasi</h2>
+            <div class="stat-grid">
+                <div class="stat"><span>Jami kitoblar</span><strong id="stat-jami">0</strong></div>
+                <div class="stat"><span>Mavjud kitoblar</span><strong id="stat-mavjud">0</strong></div>
+                <div class="stat"><span>O'rtacha narx</span><strong id="stat-ortacha">0</strong></div>
+                <div class="stat"><span>Eng qimmat kitob</span><strong id="stat-eng">-</strong></div>
+            </div>
+        </section>
+
+        <!-- KATALOG: kartalar JavaScript orqali yaratiladi -->
+        <section id="catalog-section">
+            <h2>Kitoblar katalogi</h2>
+
+            <div class="catalog-panel">
+                <input type="search" id="qidiruv" placeholder="Nom yoki muallif bo'yicha qidirish..." aria-label="Qidiruv">
+                <select id="kategoriya" aria-label="Kategoriya">
+                    <option value="hammasi">Barcha janrlar</option>
+                </select>
+                <select id="saralash" aria-label="Saralash">
+                    <option value="standart">Saralash: standart</option>
+                    <option value="narx-osish">Narx: arzondan qimmatga</option>
+                    <option value="narx-kamayish">Narx: qimmatdan arzonga</option>
+                    <option value="nom-az">Nom: A → Z</option>
+                </select>
+                <button type="button" class="btn-card" id="bandlarim-tugma" style="margin-top:0">Band qilinganlarim</button>
+            </div>
+
+            <p class="result-count">Ko'rsatilmoqda: <strong id="soni">0</strong> ta kitob</p>
+            <p class="not-found" id="topilmadi" hidden>Hech narsa topilmadi</p>
+            <div class="cards-flex" id="kitoblar"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-col">
+            <p>&copy; 2026 Kutubxona axborot tizimi.</p>
+        </div>
+        <div class="footer-col" style="text-align: right;">
+            <p>Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="top-btn">&#8675; Yuqoriga</a>
+
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/katalog.js"></script>
+</body>
+</html>
